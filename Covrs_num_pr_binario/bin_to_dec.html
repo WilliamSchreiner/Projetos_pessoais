@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title> Conversor</title>
+    <meta charset = "UTF-8">
+</header>
+<body>
+    <h2>Conversor de numero para binario</h2></br>
+    <label>Escolha um numero</label>
+</br>
+    <input type='number' id="imput-numero"></imput>
+</br>    
+</br>
+    <button onclick="converter()" id="botao"> Converter </button></br>
+    <div id="resultado"></div>
+<script>
+function converter(){
+let numero = document.querySelector("#imput-numero").value;
+
+function convertPRBinario (number) {
+    if (number > 0) {
+        return convertPRBinario( parseInt(number / 2) ) + (number % 2) };
+    return '';
+} 
+document.querySelector("#resultado").innerHTML = "O numero binario de seu numero é " + convertPRBinario(numero) ; }
+    </script>
+</body>
+</html>   
